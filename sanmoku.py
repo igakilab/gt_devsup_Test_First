@@ -89,4 +89,9 @@ if __name__ == "__main__":
 
     #勝利プレイヤーを表示
     #追加タスク
-    #⑦
+    #if(winnerPlayer == -1):
+
+        print("Draw")
+    else:
+
+        print("Winner {}".format(player[winnerPlayer].name))
