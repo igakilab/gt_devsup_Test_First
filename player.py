@@ -5,6 +5,10 @@ from abc import ABCMeta,abstractmethod
 #return 空いている:True 空いていない:False
 def CheckMath(math,height,width,piece):
     #①
+    if(math[height][width] == piece):
+       return True
+    else:
+       return False
 
 class Player(metaclass=ABCMeta):
     @abstractmethod
