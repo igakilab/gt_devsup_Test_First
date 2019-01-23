@@ -72,7 +72,9 @@ if __name__ == "__main__":
 
         #コマを盤に配置する
         #追加タスク
-        #④
+        #print("height = {0} width = {1}".format(height,width))
+
+        math[height][width] = player[turnPlayer].mine
 
         #盤を表示する
         #⑤
