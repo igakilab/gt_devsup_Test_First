@@ -47,6 +47,9 @@ class GamePlayer(Player):
                 print("範囲外です")
 
             #②
+            inputData = self.CheckWinner(math,self.mine)
+            if(not inputData == [-1,-1]):
+            return inputData
 
 #コンピュータのクラス
 class Computer(Player):
