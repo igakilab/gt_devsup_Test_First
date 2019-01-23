@@ -77,7 +77,7 @@ if __name__ == "__main__":
         math[height][width] = player[turnPlayer].mine
 
         #盤を表示する
-        #⑤
+        #ShowMath(math)
 
         #コマが揃っているか確認し、揃っていたらループを抜ける
         #⑥
