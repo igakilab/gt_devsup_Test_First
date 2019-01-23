@@ -80,7 +80,12 @@ if __name__ == "__main__":
         #ShowMath(math)
 
         #コマが揃っているか確認し、揃っていたらループを抜ける
-        #⑥
+        #if(winnerPlayer == -1):
+
+        print("Draw")
+    else:
+
+        print("Winner {}".format(player[winnerPlayer].name))
 
     #勝利プレイヤーを表示
     #追加タスク
