@@ -5,10 +5,6 @@ from abc import ABCMeta,abstractmethod
 #return 空いている:True 空いていない:False
 def CheckMath(math,height,width,piece):
     #①
-    if(math[height][width] == piece):
-       return True
-    else:
-       return False
 
 class Player(metaclass=ABCMeta):
     @abstractmethod
@@ -39,16 +35,6 @@ class GamePlayer(Player):
             #コマが置けるかの確認/置けるならその位置を返す(タスク名:Playメソッドの作成)
             #追加タスク
             #②
-            if(height >= 0 and height < 3 and width >= 0 and width < 3):
-                if(CheckMath(math,height,width,"  ")):
-                    return [height,width]
-                else:
-                    print("そのマスは置けません")
-            else:
-                print("範囲外です")
-
-
-
 
 #コンピュータのクラス
 class Computer(Player):
@@ -64,15 +50,9 @@ class Computer(Player):
 
         #自分がリーチしているか確認/置けるならその位置を返す
         #③
-        inputData = self.CheckWinner(math,self.mine)
-        if(not inputData == [-1,-1]):
-            return inputData
 
         #相手がリーチしているか確認/置けるならその位置を返す
         #④
-        inputData = self.CheckWinner(math,self.player)
-        if(not inputData == [-1,-1]):
-            return inputData
 
         #どちらもリーチでない場合優先順位でコマを置く
         for i in range(9):
@@ -89,27 +69,6 @@ class Computer(Player):
             return inputData
         #追加タスク(タスク名:CheckWinnerメソッド)
         #⑤
-        inputData = self.IsReach(math,player,[0,2],[1,-1])
-        if(not inputData == [-1,-1]):
-            return inputData
-        inputData = self.IsReach(math,player,[0,0],[0,1])
-        if(not inputData == [-1,-1]):
-            return inputData
-        inputData = self.IsReach(math,player,[1,0],[0,1])
-        if(not inputData == [-1,-1]):
-            return inputData
-        inputData = self.IsReach(math,player,[2,0],[0,1])
-        if(not inputData == [-1,-1]):
-            return inputData
-        inputData = self.IsReach(math,player,[0,0],[1,0])
-        if(not inputData == [-1,-1]):
-            return inputData
-        inputData = self.IsReach(math,player,[0,1],[1,0])
-        if(not inputData == [-1,-1]):
-            return inputData
-        inputData = self.IsReach(math,player,[0,2],[1,0])
-        if(not inputData == [-1,-1]):
-            return inputData
         return [-1,-1]
 
     #指定した列がリーチしているかの確認
@@ -122,14 +81,3 @@ class Computer(Player):
         #各マスを確認し、pieceと同じならpieceCountに１を足す。空マスならその位置を取る。
         #pieceCountが2かつ空マスがあるなら空マスの位置を返す
         #⑥
-        for i in range(3):
-            if(CheckMath(math,checkMath[0],checkMath[1],piece)):
-                pieceCount += 1
-            elif(CheckMath(math,checkMath[0],checkMath[1],"  ")):
-                result = [checkMath[0],checkMath[1]]
-            for j in range(len(checkMath)):
-                checkMath[j] += distance[j]
-        if(not pieceCount == 2 or result == []):
-            result = [-1,-1]
-        
-        return result
