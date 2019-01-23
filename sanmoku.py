@@ -9,6 +9,7 @@ def Judge(math,checkChara):
 #盤を表示する
 #math:盤(2重リスト)
 def ShowMath(math):
+    #追加タスク
     #②
 
 if __name__ == "__main__":
@@ -27,6 +28,7 @@ if __name__ == "__main__":
         height,width = player[turnPlayer].Play(math)
 
         #コマを盤に配置する
+        #追加タスク
         #④
 
         #盤を表示する
@@ -36,4 +38,5 @@ if __name__ == "__main__":
         #⑥
 
     #勝利プレイヤーを表示
+    #追加タスク
     #⑦

@@ -32,7 +32,8 @@ class GamePlayer(Player):
             height = int(inputData) // 10
             width  = int(inputData) % 10
 
-            #コマが置けるかの確認/置けるならその位置を返す
+            #コマが置けるかの確認/置けるならその位置を返す(タスク名:Playメソッドの作成)
+            #追加タスク
             #②
 
 #コンピュータのクラス
@@ -66,7 +67,8 @@ class Computer(Player):
         inputData = self.IsReach(math,player,[0,0],[1,1])
         if(not inputData == [-1,-1]):
             return inputData
-        #⑤        
+        #追加タスク(タスク名:CheckWinnerメソッド)
+        #⑤
         return [-1,-1]
 
     #指定した列がリーチしているかの確認
