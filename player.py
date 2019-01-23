@@ -38,6 +38,7 @@ class GamePlayer(Player):
 
             #コマが置けるかの確認/置けるならその位置を返す(タスク名:Playメソッドの作成)
             #追加タスク
+            #②
             if(height >= 0 and height < 3 and width >= 0 and width < 3):
                 if(CheckMath(math,height,width,"  ")):
                     return [height,width]
@@ -46,10 +47,8 @@ class GamePlayer(Player):
             else:
                 print("範囲外です")
 
-            #②
-            inputData = self.CheckWinner(math,self.mine)
-            if(not inputData == [-1,-1]):
-            return inputData
+
+
 
 #コンピュータのクラス
 class Computer(Player):
@@ -65,9 +64,15 @@ class Computer(Player):
 
         #自分がリーチしているか確認/置けるならその位置を返す
         #③
+        inputData = self.CheckWinner(math,self.mine)
+        if(not inputData == [-1,-1]):
+            return inputData
 
         #相手がリーチしているか確認/置けるならその位置を返す
         #④
+        inputData = self.CheckWinner(math,self.player)
+        if(not inputData == [-1,-1]):
+            return inputData
 
         #どちらもリーチでない場合優先順位でコマを置く
         for i in range(9):
