@@ -66,7 +66,10 @@ if __name__ == "__main__":
         ShowMath(math)
         #コマが揃っているか確認し、揃っていたらループを抜ける
         #⑥
-
+        #コマが揃っているか確認し、揃っていたらループを抜ける
+        if(Judge(math,player[turnPlayer].mine)):
+            winnerPlayer = turnPlayer
+            break
     #勝利プレイヤーを表示
     #追加タスク
     #⑦
