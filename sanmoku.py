@@ -36,6 +36,8 @@ def Judge(math,checkChara):
 def ShowMath(math):
     #追加タスク
     #②
+     for mathList in math:
+        print(mathList)
 
 if __name__ == "__main__":
     math = [["  " for i in range(3)] for j in range(3)]
