@@ -121,3 +121,14 @@ if(not inputData == [-1,-1]):
         #各マスを確認し、pieceと同じならpieceCountに１を足す。空マスならその位置を取る。
         #pieceCountが2かつ空マスがあるなら空マスの位置を返す
         #⑥
+        for i in range(3):
+    if(CheckMath(math,checkMath[0],checkMath[1],piece)):
+        pieceCount += 1
+    elif(CheckMath(math,checkMath[0],checkMath[1],"  ")):
+        result = [checkMath[0],checkMath[1]]
+    for j in range(len(checkMath)):
+        checkMath[j] += distance[j]
+if(not pieceCount == 2 or result == []):
+    result = [-1,-1]
+ 
+return result
