@@ -68,6 +68,9 @@ if(not inputData == [-1,-1]):
 
         #相手がリーチしているか確認/置けるならその位置を返す
         #④
+        inputData = self.CheckWinner(math,self.player)
+if(not inputData == [-1,-1]):
+    return inputData
 
         #どちらもリーチでない場合優先順位でコマを置く
         for i in range(9):
