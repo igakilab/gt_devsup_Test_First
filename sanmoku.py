@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
     #最初の盤の表示
     #③
-
+    ShowMath(math)
     #9ターン動かす
     for turn in range(9):
 
