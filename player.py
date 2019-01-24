@@ -87,6 +87,28 @@ if(not inputData == [-1,-1]):
             return inputData
         #追加タスク(タスク名:CheckWinnerメソッド)
         #⑤
+         inputData = self.IsReach(math,player,[0,2],[1,-1])
+    if(not inputData == [-1,-1]):
+        return inputData
+    inputData = self.IsReach(math,player,[0,0],[0,1])
+    if(not inputData == [-1,-1]):
+        return inputData
+    inputData = self.IsReach(math,player,[1,0],[0,1])
+    if(not inputData == [-1,-1]):
+        return inputData
+    inputData = self.IsReach(math,player,[2,0],[0,1])
+    if(not inputData == [-1,-1]):
+        return inputData
+    inputData = self.IsReach(math,player,[0,0],[1,0])
+    if(not inputData == [-1,-1]):
+        return inputData
+    inputData = self.IsReach(math,player,[0,1],[1,0])
+    if(not inputData == [-1,-1]):
+        return inputData
+    inputData = self.IsReach(math,player,[0,2],[1,0])
+    if(not inputData == [-1,-1]):
+        return inputData
+
         return [-1,-1]
 
     #指定した列がリーチしているかの確認
