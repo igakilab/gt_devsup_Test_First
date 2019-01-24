@@ -40,6 +40,13 @@ class GamePlayer(Player):
             #コマが置けるかの確認/置けるならその位置を返す(タスク名:Playメソッドの作成)
             #追加タスク
             #②
+            if(height &gt;= 0 and height &lt; 3 and width &gt;= 0 and width &lt; 3):
+    if(CheckMath(math,height,width,"  ")):
+        return [height,width]
+    else:
+        print("そのマスは置けません")
+else:
+    print("範囲外です")
 
 #コンピュータのクラス
 class Computer(Player):
