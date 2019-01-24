@@ -5,6 +5,31 @@ import player
 #return 揃っている:True 揃っていない:False
 def Judge(math,checkChara):
     #①
+    if(math[0][0] == checkChara and math[0][1] == checkChara and math[0][2] == checkChara):
+        return True
+ 
+    if(math[1][0] == checkChara and math[1][1] == checkChara and math[1][2] == checkChara):
+        return True
+ 
+    if(math[2][0] == checkChara and math[2][1] == checkChara and math[2][2] == checkChara):
+        return True
+ 
+    if(math[0][0] == checkChara and math[1][0] == checkChara and math[2][0] == checkChara):
+        return True
+ 
+    if(math[0][1] == checkChara and math[1][1] == checkChara and math[2][1] == checkChara):
+        return True
+ 
+    if(math[0][2] == checkChara and math[1][2] == checkChara and math[2][2] == checkChara):
+        return True
+ 
+    if(math[0][0] == checkChara and math[1][1] == checkChara and math[2][2] == checkChara):
+        return True
+ 
+    if(math[0][2] == checkChara and math[1][1] == checkChara and math[2][0] == checkChara):
+        return True
+ 
+    return False
 
 #盤を表示する
 #math:盤(2重リスト)
