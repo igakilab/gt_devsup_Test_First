@@ -62,6 +62,9 @@ class Computer(Player):
 
         #自分がリーチしているか確認/置けるならその位置を返す
         #③
+        inputData = self.CheckWinner(math,self.mine)
+if(not inputData == [-1,-1]):
+    return inputData
 
         #相手がリーチしているか確認/置けるならその位置を返す
         #④
